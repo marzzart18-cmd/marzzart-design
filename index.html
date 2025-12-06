@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Marzzart — Portfolio Desain (Minimalis)</title>
+<meta name="description" content="Marzzart — Portfolio desain poster, thumbnail, dan logo. Minimalis & elegan." />
+<style>
+  /* ---------- Palette & Base ---------- */
+  :root{
+    --bg:#0b0b0c;
+    --surface:#0f0f11;
+    --muted:#9b9b9f;
+    --text:#f3f3f4;
+    --accent:#ffffff;
+    --radius:10px;
+    --ease:300ms;
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter, "Segoe UI", Roboto, system-ui, -apple-system, Arial;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.6;
+    scroll-behavior:smooth;
+  }
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:1100px;margin:0 auto;padding:28px;}
+  header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0;margin-bottom:8px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{width:56px;height:56px;object-fit:cover;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+  .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:0.3px}
+  .navlinks{display:flex;gap:14px;align-items:center}
+  .navlinks a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px;border-radius:8px}
+  .navlinks a:hover{color:var(--accent);background:rgba(255,255,255,0.02)}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:28px 0 10px;display:grid;grid-template-columns:1fr;gap:12px;text-align:left}
+  .hero .title{font-size:34px;line-height:1.02;margin:6px 0}
+  .hero .lead{color:var(--muted);max-width:62ch;margin-top:6px;font-size:15px}
+  .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+  .btn.primary{background:var(--accent);color:#0b0b0c;border:0;box-shadow:0 10px 36px rgba(255,255,255,0.03)}
+  .btn.primary:hover{transform:translateY(-3px);transition:transform var(--ease)}
+
+  /* ---------- Sections ---------- */
+  section{margin-top:40px;padding-top:8px}
+  .section-title{font-size:18px;margin:0 0 6px 0;font-weight:700}
+  .section-sub{color:var(--muted);margin:0 0 18px 0;font-size:14px}
+
+  /* ---------- Gallery ---------- */
+  .gallery{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:start}
+  .card{background:var(--surface);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.02);transition:transform .28s ease, box-shadow .28s ease}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+  .card img{width:100%;height:220px;object-fit:cover;display:block}
+  .card .meta{padding:12px 14px}
+  .card h4{margin:0 0 6px 0;font-size:15px}
+  .card p{margin:0;color:var(--muted);font-size:13px}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:48px;padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
+
+  /* ---------- Small screens ---------- */
+  @media (max-width:860px){
+    .hero{padding:18px 0}
+    .brand img{width:48px;height:48px}
+    .card img{height:180px}
+  }
+
+  /* subtle fade-in on load */
+  .fade-up{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+  .visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <!-- NAV -->
+  <header>
+    <div class="brand">
+      <!-- header logo (first logo file) -->
+      <img src="https://i.ibb.co.com/Y4vP1QNc/quality-restoration-20251203190351930.jpg" alt="quality-restoration-20251203190351930" border="0" /></a>
+      <div>
+        <h1>Marzzart</h1>
+        <div style="color:var(--muted);font-size:13px">Poster · Thumbnail · Logo</div>
+      </div>
+    </div>
+
+    <nav class="navlinks" aria-label="Main">
+      <a href="#posters">Poster</a>
+      <a href="#thumbs">Thumbnail</a>
+      <a href="#logos">Logo</a>
+      <a class="btn" href="https://www.instagram.com/marzzart18" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero fade-up" id="hero">
+    <div>
+      <div class="kicker" style="color:var(--muted);font-weight:700;font-size:13px">MARZZART — PORTFOLIO</div>
+      <h2 class="title">Desain minimalis & elegan yang membantu produkmu lebih menonjol</h2>
+      <p class="lead">Kumpulan karya poster produk, thumbnail video, dan logo. Fokus pada keterbacaan, kontras, dan pesan yang jelas — siap pakai untuk promosi dan platform sosial.</p>
+
+      <div class="cta">
+        <a class="btn primary" href="https://www.instagram.com/marzzart18" target="_blank" rel="noopener">Hubungi via Instagram</a>
+        <a class="btn" href="#work">Lihat Karya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTERS -->
+  <section id="posters" class="fade-up">
+    <h3 class="section-title">Desain Poster Produk</h3>
+    <p class="section-sub">Poster promo dan materi visual untuk produk (siap cetak & digital).</p>
+
+    <div class="gallery" id="gallery-posters">
+      <article class="card">
+        <img src="https://i.ibb.co.com/PZg6xqfL/1764929257160-251205195027.png" alt="1764929257160-251205195027" border="0" /></a>
+        <div class="meta"><h4>Poster Produk — 01</h4><p class="muted">High-contrast, CTA jelas.</p></div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.ibb.co.com/MyZ62Wpt/dreamina-2025-12-05-8625-Poster-promosi-makanan-untuk-UMKM-Warun-251205194550.png" alt="dreamina-2025-12-05-8625-Poster-promosi-makanan-untuk-UMKM-Warun-251205194550" border="0" /></a>
+        <div class="meta"><h4>Poster Produk — 02</h4><p class="muted">Modern layout, social-ready.</p></div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.ibb.co.com/7NgyTd41/dreamina-2025-12-05-9900-Poster-promosi-minuman-UMKM-Fresh-Fru-251205193904-251205194103.png" alt="dreamina-2025-12-05-9900-Poster-promosi-minuman-UMKM-Fresh-Fru-251205193904-251205194103" border="0" /></a>
+        <div class="meta"><h4>Poster Produk — 03</h4><p class="muted">Warna menarik & informasi ringkas.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- THUMBNAILS -->
+  <section id="thumbs" class="fade-up">
+    <h3 class="section-title">Desain Thumbnail Video</h3>
+    <p class="section-sub">Thumbnail yang dirancang untuk meningkatkan klik & engagement.</p>
+
+    <div class="gallery" id="gallery-thumbs">
+      <article class="card">
+        <img src="https://i.ibb.co.com/PvcNhKwc/dreamina-2025-12-05-6593-Thumbnail-video-promosi-jam-tangan-pria-251205223054.png" alt="dreamina-2025-12-05-6593-Thumbnail-video-promosi-jam-tangan-pria-251205223054" border="0" /></a>
+        <div class="meta"><h4>Thumbnail — 01</h4><p class="muted">Ekspresi & headline bold.</p></div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.ibb.co.com/4R3HKzW0/dreamina-2025-12-05-6532-Thumbnail-video-promosi-headset-gaming-b-251205222525.png" alt="dreamina-2025-12-05-6532-Thumbnail-video-promosi-headset-gaming-b-251205222525" border="0" /></a>
+        <div class="meta"><h4>Thumbnail — 02</h4><p class="muted">Kontras tinggi untuk CTR.</p></div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.ibb.co.com/Q3p04TrB/dreamina-2025-12-05-8809-Thumbnail-promosi-video-marketing-untuk-251205202138.png" alt="dreamina-2025-12-05-8809-Thumbnail-promosi-video-marketing-untuk-251205202138" border="0" /></a>
+        <div class="meta"><h4>Thumbnail — 03</h4><p class="muted">Judul jelas & fokus visual.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section id="logos" class="fade-up">
+    <h3 class="section-title">Desain Logo Produk</h3>
+    <p class="section-sub">Varian logo & mark — siap untuk brand identity.</p>
+
+    <div class="gallery" id="gallery-logos">
+      <article class="card">
+        <img src="https://i.ibb.co.com/pjSSD1NZ/dreamina-2025-12-05-8316-Branding-logo-profesional-untuk-perusaha-251205223227.png" alt="dreamina-2025-12-05-8316-Branding-logo-profesional-untuk-perusaha-251205223227" border="0" /></a>
+        <div class="meta"><h4>Logo — 01</h4><p class="muted">Mark modern & minimal.</p></div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.ibb.co.com/YF94hr45/1764929935497-251205194846.png" alt="1764929935497-251205194846" border="0" /></a>
+        <div class="meta"><h4>Logo — 02</h4><p class="muted">Versi warna & mono.</p></div>
+      </article>
+
+      <article class="card">
+        <img src="https://i.ibb.co.com/jvMTcz25/1764929986705-251205194816.png" alt="1764929986705-251205194816" border="0" /></a>
+        <div class="meta"><h4>Logo — 03</h4><p class="muted">Badge & emblem.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    Follow Instagram: <a href="https://www.instagram.com/marzzart18" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">@marzzart18</a>
+  </footer>
+</div>
+
+<script>
+  // reveal animation
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('.fade-up').forEach((el,i)=>{
+      setTimeout(()=> el.classList.add('visible'), 120*i);
+    });
+  });
+
+  // quick check: replace broken images with placeholder (if any)
+  document.querySelectorAll('img').forEach(img=>{
+    img.addEventListener('error',()=> img.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="100%" height="100%" fill="%230f0f11"/><text x="50%" y="50%" font-size="18" fill="%23bbb" text-anchor="middle" dy=".35em">Image not available</text></svg>');
+  });
+</script>
+</body>
+</html>
